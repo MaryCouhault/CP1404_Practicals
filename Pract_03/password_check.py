@@ -1,4 +1,5 @@
-"""CP1404
+"""
+CP1404
 Name: Mary Couhault
 Date: July 30th 2021
 Description: Asks user for a password and prints the equivalent length of *
@@ -6,6 +7,10 @@ Description: Asks user for a password and prints the equivalent length of *
 
 
 def main():
+    get_name()
+
+
+def get_name():
     password = input("What is your password?")
     pass_length = len(password)  # takes the password and gets its length
     print_asterisks(pass_length)
