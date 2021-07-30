@@ -8,11 +8,11 @@ Description: Asks user for a password and prints the equivalent length of *
 def main():
     password = input("What is your password?")
     pass_length = len(password)  # takes the password and gets its length
-    length(pass_length)
+    print_asterisks(pass_length)
 
 
-def length(pass_length):
-    for i in range(pass_length):
+def print_asterisks(pass_length):
+    for i in range(1, pass_length):
         print("*", end="")
 
 
