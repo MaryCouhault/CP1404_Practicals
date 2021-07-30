@@ -16,4 +16,5 @@ def print_asterisks(pass_length):
         print("*", end="")
 
 
-main()
+if __name__ == '__main__':
+    main()
