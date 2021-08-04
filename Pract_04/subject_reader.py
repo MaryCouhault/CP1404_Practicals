@@ -12,6 +12,7 @@ def main():
 
 
 def get_data():
+    data_list = []
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
     for line in input_file:
@@ -23,7 +24,15 @@ def get_data():
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
         print("----------")
+        data_list.append(parts)
+
     input_file.close()
+    return
+
+
+def line_printing():
+    print(" {} is taught by {} and has {} students").format(class_num,teacher,classmates))
+
 
 
 main()
