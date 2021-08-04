@@ -32,8 +32,7 @@ numbers[0] = 'ten'
 numbers[-1] = 1
 
 print(numbers)
-print(numbers[:-2])
+print(numbers[2:])
 
-
-number_of_elements = len(numbers)
-print(number_of_elements)
+if 9 in numbers:
+    print(True, end=' ')
