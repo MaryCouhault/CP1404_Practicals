@@ -8,14 +8,14 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = get_data()
-    print(data)
-    line_printing(data_list)
+    printing(data)
 
 
 def get_data():
-    data_list = []
+
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
+    data_list = []
     for line in input_file:
         print(line)  # See what a line looks like
         print(repr(line))  # See what a line really looks like
@@ -26,14 +26,13 @@ def get_data():
         print(parts)  # See if that worked
         print("----------")
         data_list.append(parts)
-
     input_file.close()
     return data_list
 
 
-def line_printing(data_list):
-    for subject_info in data_list():
-        print(" {} is taught by {:12} and has {:3} students".format(*subject_info))
+def printing(data):
+    for subject in data:
+        print(" {} is taught by {:12} and has {:3} students".format(*subject))
 
 
 main()
