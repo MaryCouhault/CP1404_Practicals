@@ -1,13 +1,14 @@
-from _ast import For
-
-five_number = []
-
-num_count = 0
-
 def main():
-    new_number_number = input("Write a Number: ")
-    for new_number_number in (1,6):
-        five_number.append(new_number_number)
+    numbers = []
+    for i in range(1, 6):
+        new_numbers = int(input(f"Write Number {i}: "))
+        numbers.append(new_numbers)  # puts the new number into the list
+
+    print("The first number is", numbers[0])
+    print("The last number is", numbers[-1])
+    print("The smallest number is", min(numbers))
+    print("The largest number is", max(numbers))
+    print("The average of the numbers is", sum(numbers) / len(numbers))
 
 
 main()
