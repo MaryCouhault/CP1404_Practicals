@@ -6,19 +6,20 @@ prints out hexcolor code
 
 
 def main():
-    colors_to_hex: dict[str, str] = {"Violet": "#ee82ee", "Turquoise": "#40e0d0", "Thistle": "#d8bfd8",
-                                     "Plum": "#dda0dd",
-                                     "Pink": "#ffc0cb", "PaleVioletRed": "#db7093", "MintCream": "#f5fffa",
-                                     "MediumOrchid": "#ba55d3", "LimeGreen": "#32cd32", "LightCoral": "#f08080"}
+    colors_to_hex = {"violet": "#ee82ee", "turquoise": "#40e0d0", "thistle": "#d8bfd8",
+                     "plum": "#dda0dd",
+                     "pink": "#ffc0cb", "palevioletred": "#db7093", "mintcream": "#f5fffa",
+                     "mediumorchid": "#ba55d3", "limegreen": "#32cd32", "lightcoral": "#f08080"}
 
-    color = input("What color would you like to pick?").title()
-    while color != "":
+    for m in colors_to_hex:
+        print(m)
+    color = input("What color would you like to pick?").lower()
+    while color != " ":
         if color in colors_to_hex:
             print(color, "is", colors_to_hex[color])
         else:
             print("Invalid input")
-        color = input("What color would you like to pick: ").title()
-
+        color = input("What color would you like to pick: ").lower()
     for x, y in colors_to_hex.items():
         print(f"{x} is {y}")
 
