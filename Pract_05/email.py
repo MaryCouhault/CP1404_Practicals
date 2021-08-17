@@ -1,18 +1,26 @@
-"""
-CP1404/CP5632 Practical
-User Enters email
-Program Prints their name
-"""
-
 
 def main():
-    email_capture = []
-    email = input("What is your email? ")
-    while email != " ":
-        name = email.split()
-        email_capture.append(name)
-        print(name)
-        return name
+    """Create dictionary of emails-to-names."""
+    email_to_name = {}
+    email = input("Email: ")
+    while email != "":
+        name = name_from_email(email)
+        your_name = input("Is your name {}? (Y/n) ".format(name))
+        if your_name.upper() != "Y" and your_name != "":
+            name = input("Name: ")
+        email_to_name[email] = name
+        email = input("Email: ")
+
+    for email, name in email_to_name.items():
+        print("{} ({})".format(name, email))
+
+
+def name_from_email(email):
+    """Extract expected name from email address."""
+    prefix = email.split('@')[0]
+    parts = prefix.split('.')
+    name = " ".join(parts).title()
+    return name
 
 
 main()
