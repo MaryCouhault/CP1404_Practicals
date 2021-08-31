@@ -10,7 +10,7 @@ from datetime import datetime
         return f"{self.name}, ({self.year}): ${self.cost:.2f}"
 
     def get_age(self):
-        year = 2021
+        year = datetime.now().year
         return year - self.year
 
     def is_vintage(self):
