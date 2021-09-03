@@ -13,6 +13,7 @@ class BoxLayoutDemo(App):
 
     def clear_all(self):
         self.root.ids.output_label.text = " "
+        self.root.ids.input_name.text = " "
 
 
 
