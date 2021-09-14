@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Car class
 """
-from Pract_06.car import Car
+from Pract_08.car import Car
 
 
 class Taxi(Car):
@@ -10,9 +10,6 @@ class Taxi(Car):
     price_per_km = 1.23
 
     def __init__(self, name, fuel):
-        ...
-
-    def __init__(self, name="", fuel=0, price_per_km=0):
         """Initialise a Taxi instance, based on parent class Car."""
         super().__init__(name, fuel)
         self.current_fare_distance = 0
@@ -36,4 +33,3 @@ class Taxi(Car):
         distance_driven = super().drive(distance)
         self.current_fare_distance += distance_driven
         return distance_driven
-
