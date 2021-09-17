@@ -9,16 +9,17 @@ class DynamicLabels(App):
         super().__init__(**kwargs)
         self.names = ["Abhi", "Shawl", "Dag", "Dog", "BRECK"]
 
-    def build(self):
-        self.title = "Dynamic Name Labels"
-        self.root = Builder.load_file('dynamic_labels.kv')
-        self.create_labels()
-        return self.root
-
     def create_label(self):
         for name in self.names:
             self.root.ids.main.add_widget(Label(text=name))
         return
+
+    def build(self):
+        self.title = "Dynamic Names"
+        self.root = Builder.load_file('dynamic_labels.kv')
+        self.create_labels()
+        return self.root
+
 
 
 DynamicLabels().run()
